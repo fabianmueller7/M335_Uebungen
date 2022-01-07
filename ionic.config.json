@@ -1,0 +1,7 @@
+{
+  "name": "G2_MuellerFabian_Uebungen",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

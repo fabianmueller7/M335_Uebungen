@@ -1,0 +1,85 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Rechner</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+      <h5>{{data.text}}</h5>
+</ion-content>
+
+<ion-footer>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-button color="primary" expand="full" (click)="pushToDataText('/')">/</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button color="primary" expand="full" (click)="pushToDataText('*')">*</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button color="primary" expand="full" (click)="pushToDataText('-')">-</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button color="primary" expand="full" (click)="pushToDataText('+')">+</ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-button color="medium" expand="full" (click)="pushToDataText('7')">7</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button color="medium" expand="full" (click)="pushToDataText('8')">8</ion-button>
+      </ion-col> 
+      <ion-col>
+        <ion-button color="medium" expand="full" (click)="pushToDataText('9')">9</ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-button color="medium" expand="full" (click)="pushToDataText('4')">4</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button color="medium" expand="full" (click)="pushToDataText('5')">5</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button color="medium" expand="full" (click)="pushToDataText('6')">6</ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-button color="medium" expand="full" (click)="pushToDataText('1')">1</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button color="medium" expand="full" (click)="pushToDataText('2')">2</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button color="medium" expand="full" (click)="pushToDataText('3')">3</ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-button color="danger" expand="full" (click)="clearDataText()">AC</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button color="medium" expand="full" (click)="pushToDataText('0')">0</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button color="success" expand="full" (click)="pushToDataText('.')">.</ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-button color="dark" expand="full" (click)="getResult()">=</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-footer>
