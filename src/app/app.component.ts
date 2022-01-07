@@ -15,6 +15,7 @@ export class AppComponent {
     { title: 'Data Binding', url: '/data', icon: 'analytics' },
     { title: 'Rechner', url: '/rechner', icon: 'calculator' },
     { title: 'Alerts', url: '/alerts', icon: 'alert-circle' },
+    { title: 'Newsletter', url: '/newsletter', icon: 'newspaper' },
   ];
   constructor() {}
 }
