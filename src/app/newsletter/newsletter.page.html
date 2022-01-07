@@ -8,6 +8,7 @@
 </ion-header>
 
 <ion-content>
+  <ion-img [src]="printersrc" id="logo"></ion-img>
   <h3>Jetzt für unseren neusten Newsletter anmelden</h3>
   <form [formGroup]="contactForm" (ngSubmit)="sendContactForm()">
     <ion-item>

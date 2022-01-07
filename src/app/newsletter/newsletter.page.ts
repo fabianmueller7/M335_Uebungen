@@ -10,6 +10,7 @@ import { ToastController } from '@ionic/angular';
 export class NewsletterPage implements OnInit {
 
   contactForm: FormGroup;
+  printersrc = './../../assets/newsletterprinter.gif';
 
   constructor(public toastController: ToastController) { }
 
