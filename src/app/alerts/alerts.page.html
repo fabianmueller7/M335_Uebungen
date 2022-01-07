@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Alerts</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button color="primary" expand="full" (click)="getNickname()">Nickname erfassen</ion-button>
+  <p id="output"></p>
+  <br>
+
+  <ion-button id="blackbutton" (press)="updateCounter()">Press me!</ion-button>
+  <p>Er wurde {{buttonPressCounter}} gedrückt.</p>
+</ion-content>

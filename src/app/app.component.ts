@@ -14,6 +14,7 @@ export class AppComponent {
     { title: 'Array', url: '/array', icon: 'barcode' },
     { title: 'Data Binding', url: '/data', icon: 'analytics' },
     { title: 'Rechner', url: '/rechner', icon: 'calculator' },
+    { title: 'Alerts', url: '/alerts', icon: 'alert-circle' },
   ];
   constructor() {}
 }
