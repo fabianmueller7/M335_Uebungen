@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-title>chat</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content  scrollY="True" style="padding:0px !important;">
+  <ion-grid class="grid">
+    <ion-row class="messaging">
+        <div #scrollMe class="chat-nachrichten" (swipe)="swipeEvent($event)"  >
+          <ion-list >
+            <ion-item *ngFor="let chat of chatList | async; index as i" scrollY="false" >
+              <div class="messages" [class.other]="chat.username === this.currentUser">
+                  <div class="message">
+                      <span>
+                          <h3 *ngIf="chat.username" >{{chat.username}} </h3>                                                    
+                          <p *ngIf="chat.text">{{chat.text}}</p>
+                      </span>
+                      <div class="time" *ngIf="showDates">{{chat.date}}</div>
+                  </div>
+              </div>
+            </ion-item>
+          </ion-list>
+        </div>
+    </ion-row>
+    <ion-row class="messageinput">
+        <form [formGroup]="messageForm" (ngSubmit)="sendMessage()" class="chat-eingabe">
+          <ion-input formControlName="messagefield" type="text" required="true"></ion-input>
+            <ion-button block color="primary" type="submit" #newmessage>
+              <ion-icon *ngIf="!showSpinnerIcon" name="send"></ion-icon>
+              <ion-spinner *ngIf="showSpinnerIcon" name="bubbles"></ion-spinner>
+            </ion-button>     
+        </form>
+    </ion-row>
+  </ion-grid>
+</ion-content>

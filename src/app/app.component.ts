@@ -17,6 +17,7 @@ export class AppComponent {
     { title: 'Alerts', url: '/alerts', icon: 'alert-circle' },
     { title: 'Newsletter', url: '/newsletter', icon: 'newspaper' },
     { title: 'Storage', url: '/storage', icon: 'cloud-circle' },
+    { title: 'Chat', url: '/chat', icon: 'chatbubbles' },
   ];
   constructor() {}
 }
