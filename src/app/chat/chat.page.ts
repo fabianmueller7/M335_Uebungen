@@ -13,7 +13,7 @@ import { Observable } from 'rxjs';
 
 export class ChatPage implements OnInit {
   // TODO: In der Angular Doku nachlesen, was ViewChild macht und basierend auf deinem HTML XXXXX ersetzen
-  @ViewChild('newmessage', {static: false}) messageInput: string;
+  @ViewChild('newmessage', {static: false}) messageInput;
   @ViewChild('scrollMe', {static: false}) private myScrollContainer: ElementRef;
 
   message: string;
@@ -36,7 +36,8 @@ export class ChatPage implements OnInit {
     });
   }
 
-  scrollToBottom(): void {
+  // eslint-disable-next-line @angular-eslint/use-lifecycle-interface
+  ngAfterViewChecked() {
     try {
       this.myScrollContainer.nativeElement.scrollTop = this.myScrollContainer.nativeElement.scrollHeight;
     } catch (err) { }
