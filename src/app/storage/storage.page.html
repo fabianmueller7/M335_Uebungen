@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Storage</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h3>Jetzt für unseren neusten Newsletter anmelden</h3>
+  <form [formGroup]="storageForm" (ngSubmit)="sendContactForm()">
+    <ion-item>
+      <ion-label position="floating">Localstorage <ion-text color="danger">*</ion-text></ion-label>
+      <ion-input formControlName="localstorage" type="text" required="true"></ion-input>
+    </ion-item>
+    <ion-button block color="primary" type="submit">
+      Save to localstorage
+    </ion-button>
+  </form>
+
+  <ion-button block color="success" (click)="presentToast()">Look into local storage</ion-button>
+</ion-content>

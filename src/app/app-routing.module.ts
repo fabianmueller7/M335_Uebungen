@@ -45,6 +45,10 @@ const routes: Routes = [
   {
     path: 'newsletter',
     loadChildren: () => import('./newsletter/newsletter.module').then( m => m.NewsletterPageModule)
+  },
+  {
+    path: 'storage',
+    loadChildren: () => import('./storage/storage.module').then( m => m.StoragePageModule)
   }
 ];
 
