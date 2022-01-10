@@ -34,10 +34,15 @@ export class ChatPage implements OnInit {
     this.messageForm = new FormGroup({
       messagefield: new FormControl('', )
     });
+    this.scrollToBottom();
   }
 
   // eslint-disable-next-line @angular-eslint/use-lifecycle-interface
   ngAfterViewChecked() {
+    this.scrollToBottom();
+  }
+
+  scrollToBottom() {
     try {
       this.myScrollContainer.nativeElement.scrollTop = this.myScrollContainer.nativeElement.scrollHeight;
     } catch (err) { }
